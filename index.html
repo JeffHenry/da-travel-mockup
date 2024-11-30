@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expedia Mockup</title>
+    <style>
+      /* Basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #003580;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .search-box {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+
+      .search-box input,
+      .search-box button {
+        padding: 10px;
+        margin: 5px 0;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .search-box button {
+        background-color: #003580;
+        color: white;
+        cursor: pointer;
+      }
+
+      .listings {
+        margin-top: 20px;
+      }
+
+      .listing-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+
+      /* Cookie consent pop-up */
+      .cookie-popup {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      .cookie-popup button {
+        margin: 5px;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .accept {
+        background-color: #28a745;
+        color: white;
+      }
+
+      .reject {
+        background-color: #dc3545;
+        color: white;
+      }
+
+      .close {
+        background-color: #6c757d;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Expedia Mockup</h1>
+    </header>
+    <main>
+      <!-- Search section -->
+      <div class="search-box">
+        <h2>Plan Your Trip</h2>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" placeholder="Enter destination" />
+        <label for="dates">Dates:</label>
+        <input type="text" id="dates" placeholder="Enter dates" />
+        <label for="travelers">Number of Travelers:</label>
+        <input
+          type="number"
+          id="travelers"
+          placeholder="Enter number of travelers"
+        />
+        <button type="button">Search</button>
+      </div>
+
+      <!-- Listings section -->
+      <div class="listings">
+        <h2>Featured Hotels</h2>
+        <div class="listing-item">
+          <h3>Hotel California</h3>
+          <p>Los Angeles, CA - $200 per night</p>
+        </div>
+        <div class="listing-item">
+          <h3>Grand New York</h3>
+          <p>New York City, NY - $300 per night</p>
+        </div>
+        <div class="listing-item">
+          <h3>Beachside Bliss</h3>
+          <p>Miami, FL - $150 per night</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Cookie consent pop-up -->
+    <div class="cookie-popup" id="cookiePopup">
+      <p>
+        This site uses cookies to enhance your experience. Do you accept
+        cookies?
+      </p>
+      <button class="accept" onclick="closePopup()">Accept Cookies</button>
+      <button class="reject" onclick="closePopup()">Reject Cookies</button>
+      <button class="close" onclick="closePopup()">X</button>
+    </div>
+
+    <script>
+      // JavaScript to handle pop-up close functionality
+      function closePopup() {
+        document.getElementById("cookiePopup").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
